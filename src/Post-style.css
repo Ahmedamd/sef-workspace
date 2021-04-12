@@ -1,0 +1,172 @@
+.Posts {
+  margin: 1px auto;
+  min-width: 470px;
+  max-width: 700px;
+  margin-top: 15px;
+  border-radius: 15px;
+  background-color: #ffffff;
+
+  box-shadow: 0px 0px 5px 0.2px #c7c6c6;
+  margin-bottom: 1rem;
+}
+
+.post-top {
+  display: flex;
+  padding: 15px 20px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.profile-pic {
+  margin-right: 8px;
+}
+.post-content {
+  margin-bottom: 5px;
+  padding: 5px 20px;
+  height: auto;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.image-post > img {
+  width: 100%;
+}
+
+.post-bottom {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding: 5px 20px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.timestamp {
+  color: gray;
+  font-size: small;
+}
+
+.post-bottom > .btn-post > .MuiSvgIcon-root {
+  transform: translateX(10px);
+  transform: translateY(7px);
+  margin-right: 0.8rem;
+  font-size: 1.7rem;
+  color: gray;
+}
+
+.post-bottom > .likeCount > .MuiSvgIcon-root {
+  transform: translateX(10px);
+  transform: translateY(7px);
+  margin-right: 0.8rem;
+  font-size: 1.7rem;
+  color: blue;
+}
+.btn-post {
+  align-items: center;
+  border: none;
+  padding: 5px 20px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: white;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: gray;
+}
+
+.btn-post:hover {
+  background-color: #eff2f5;
+  border-radius: 10px;
+  border: none;
+}
+
+.post-comment {
+  display: flex;
+
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 1rem 1rem;
+}
+.username-comment {
+  margin-right: 0.7rem;
+}
+.comment-input {
+  flex: 0.9;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  width: 570px;
+  font-size: 1rem;
+  background-color: #eff2f5;
+}
+
+::placeholder {
+  font-weight: light;
+  color: rgb(95, 93, 93);
+}
+
+.comments-thread {
+  display: flex;
+  display: flex;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.comment-box {
+  background-color: #eff2f5;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.username-comment {
+  font-weight: 700;
+}
+
+.post-dummyid {
+  display: none;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.post-comment > .comment > form > button {
+  display: none;
+}
+.comments {
+  color: grey;
+  display: flex;
+}
+
+.Please {
+  color: black;
+  font-size: small;
+  transform: translateX(10px);
+}
+
+.likes {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.space {
+  margin-left: 0.25rem;
+}
+
+.num-likes {
+  margin-left: 0.4rem;
+}
+
+.like-section {
+  display: flex;
+}

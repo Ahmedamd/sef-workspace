@@ -1,0 +1,23 @@
+:root {
+  --transition: all 1s ease;
+}
+.group-options {
+  display: flex;
+  align-items: center;
+  /* background-color: wheat; */
+  padding: 10px 10px;
+  transition: var(--transition);
+  font-size: 1.2rem;
+}
+
+.group-options:hover {
+  background-color: wheat;
+}
+
+.group-options > .MuiSvgIcon-root {
+  margin-right: 7px;
+}
+
+.group-name {
+  font-weight: 500;
+}

@@ -1,25 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Newsfeed from './NewsFeed'
+import Sidebar from './Sidebar'
+import MainSidebar from './MainSidebar/MainSidebar'
+import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined';
 import './App.css';
+import Login from './Login/Login.js'
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { useStateValue } from './StateProvider';
+import { findAllByDisplayValue } from '@testing-library/react';
+
 
 function App() {
+
+ const [ {user}, dispatch] = useStateValue();
+  const [showMainSidebar, setshowMainSidebar] = useState(true);
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        {!user ?(
+          <Login/>
+
+        ):(
+          <>
+
+        <div className = "Sidebar">
+           <Sidebar/>
+           <ArrowForwardOutlinedIcon className="hide" onClick={()=> setshowMainSidebar(!showMainSidebar) }/>
+        </div>
+          
+          {showMainSidebar?
+           <div className = "MainSidebar">
+         <MainSidebar />
+        </div>:null}
+        
+       
+            <Switch>
+              <Route path = "/room/:roomId">
+            
+                  <div className="NewsFeed">
+                    <Newsfeed/>
+                  </div>
+              </Route>
+
+               <Route path="/">
+                <h1>welcome</h1>
+               </Route>
+
+            </Switch>
+ </>
+        )}
+       
+         
+      </Router>
+     
+     
     </div>
+    // end of App
   );
 }
 
