@@ -27,7 +27,7 @@ function Posts({postId, userImage, username, message, timestamp, picture,id, use
      const count = document.querySelectorAll(".Posts");
      const [comments, setCommentThread]= useState([]);
      const [like, setLike] = useState(false);
-     const [liketrack, setLiketrack] = useState(0);
+     
      const [ blue, setBlue] = useState("blue");
      const [inherit, setInherit] = useState("inherit");
      const [colour,setColour] = useState("inherit");
