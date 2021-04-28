@@ -2,14 +2,16 @@
   --transition: all 1s ease-in;
 }
 .Sidebar {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  position: fixed;
+  scroll-behavior: smooth;
   justify-content: space-evenly;
+  background: indianred;
+  margin: 0;
 }
 
 .top-section {
   display: flex;
-  flex: 0.25;
   flex-direction: column;
   justify-content: space-around;
   background-color: wheat;
@@ -28,8 +30,8 @@
 
 .middle-section {
   display: flex;
-  flex: 0.6;
-  background-color: indianred;
+
+  background-color: lightblue;
   justify-content: center;
   align-items: center;
 }
@@ -39,10 +41,10 @@
 }
 .bottom-section {
   display: flex;
-  flex: 0.2;
+
   flex-direction: column;
   justify-content: space-around;
-  padding: 0.6rem;
+
   align-items: center;
   background-color: wheat;
 }

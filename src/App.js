@@ -8,21 +8,34 @@ import Login from './Login/Login.js'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { useStateValue } from './StateProvider';
 import { findAllByDisplayValue } from '@testing-library/react';
+import {ContactsProvider} from "./contexts/ContactsProvider";
+
+import { Store } from '@material-ui/icons';
 
 
 function App() {
 
  const [ {user}, dispatch] = useStateValue();
   const [showMainSidebar, setshowMainSidebar] = useState(true);
- 
+
+
   return (
     <div className="App">
       <Router>
         {!user ?(
           <Login/>
-
+           
         ):(
+          // store user name and user id in an object
+
+
           <>
+
+        <ContactsProvider>
+
+          
+
+ 
 
         <div className = "Sidebar">
            <Sidebar/>
@@ -48,14 +61,18 @@ function App() {
                </Route>
 
             </Switch>
+            </ContactsProvider>
+           
  </>
+
+ 
         )}
        
          
       </Router>
      
-     
-    </div>
+      
+    </div >
     // end of App
   );
 }

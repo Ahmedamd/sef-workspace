@@ -1,7 +1,9 @@
 * {
   margin: 0;
 }
-
+.flex {
+  display: flex;
+}
 .App {
   display: flex;
   background-color: transparent;
@@ -15,13 +17,14 @@
 .hide {
   position: absolute;
   left: 35%;
+  top: 55%;
   font-size: 1rem;
 }
 
 .Sidebar > .MuiSvgIcon-root {
   font-size: 1.8rem;
-  border: 2px solid black;
-  border-radius: 1.1rem;
+  /* border: 2px solid black;
+  border-radius: 1.1rem;  */
 }
 
 .Sidebar {

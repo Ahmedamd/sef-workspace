@@ -21,8 +21,6 @@ import {holder} from './ImageUpload'
 import ImageUpload from './ImageUpload';
 import {storage}  from "./firebase"
 
-// or
-
 
 
 function Newsfeed() {

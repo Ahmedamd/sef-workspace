@@ -35,7 +35,7 @@ function Sidebar() {
 
                 <div className="middle-icon" >
                   
-                 
+                 {/* <ArrowForwardOutlinedIcon/> */}
                 </div>
             </div>
 

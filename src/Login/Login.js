@@ -9,6 +9,8 @@ import { actionTypes } from '../Reducer';
 function Login() {
 
     const [state, dispatch] = useStateValue();
+    
+
 
     const signIn = () =>{
         auth.signInWithPopup(provider).then((result)=>{
@@ -20,6 +22,9 @@ function Login() {
         }).catch((error)=>{
             alert(error.message);
         });
+
+        //also add to list on of contacts
+
     };
 
     

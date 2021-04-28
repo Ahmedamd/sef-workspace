@@ -20,8 +20,7 @@ function Posts({postId, userImage, username, message, timestamp, picture,id, use
 
      const [{user}] = useStateValue();
      const [commentInput,setComment]= useState("");
-    const [num,setNum]= useState(0);
-     const [numB,setNumB]= useState(0);
+   
      const [postIds, setPostId] = useState([]);
      const{roomId} = useParams();
      const count = document.querySelectorAll(".Posts");
@@ -192,6 +191,7 @@ function Posts({postId, userImage, username, message, timestamp, picture,id, use
     <h2>number of unique user</h2>
     <h2>{uniqueUsers}</h2>
 </div> */}
+
 
             <div className="post-dummyid">
                 {postIds.map((postid) =>(

@@ -9,14 +9,20 @@ import AddIcon from "@material-ui/icons/Add";
 import db from "../firebase";
 import array from "../IconGen";
 import People from "../People.js";
+import {useContacts} from "../contexts/ContactsProvider";
+
 
 function MainSidebar() {
 
-    const [channels, setChannels] = useState([]);
+    const [channels, setChannels] = useState([]); 
+    
+ 
   
     const ex = array;
     const max = ex.length;
     const res =  Math.floor(Math.random()*max);
+      const {contacts} = useContacts()
+
     
     useEffect(() => {
 
@@ -33,10 +39,7 @@ function MainSidebar() {
     }, [ ])
    
     return (
-        
-       
-   
-            
+           
              <div className ="MainSidebar">
             <div className="search-bar-container">
                 <SearchOutlinedIcon/>
@@ -67,6 +70,18 @@ function MainSidebar() {
                 <h3 className= "group-title people-title">People</h3>
 
                 <People/>
+
+                {contacts.map(contact=>(
+                <div className="contacts-list">
+                        <h3>{contact.username}</h3>
+                        <h3>
+                            {/* {contact.userid} */}
+                        </h3>
+                        {console.log("I'm in Main sidebar")}
+                </div>
+               
+            
+            ))}
 
             </div>
         </div>
